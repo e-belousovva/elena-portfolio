@@ -36,6 +36,7 @@
                 <a href="{{ route('home') }}#about" class="text-sm text-white/50 hover:text-white transition-colors font-mono">{{ __('portfolio.nav.about') }}</a>
                 <a href="{{ route('home') }}#experience" class="text-sm text-white/50 hover:text-white transition-colors font-mono">{{ __('portfolio.nav.experience') }}</a>
                 <a href="{{ route('home') }}#projects" class="text-sm text-white/50 hover:text-white transition-colors font-mono">{{ __('portfolio.nav.projects') }}</a>
+                <a href="{{ route('home') }}#cases" class="text-sm text-white/50 hover:text-white transition-colors font-mono">{{ __('portfolio.nav.cases') }}</a>
                 <a href="{{ route('home') }}#contact" class="text-sm text-white/50 hover:text-white transition-colors font-mono">{{ __('portfolio.nav.contact') }}</a>
             </nav>
 
@@ -79,6 +80,7 @@
             <a href="{{ route('home') }}#about" @click="mobileOpen = false" class="mobile-nav-link">{{ __('portfolio.nav.about') }}</a>
             <a href="{{ route('home') }}#experience" @click="mobileOpen = false" class="mobile-nav-link">{{ __('portfolio.nav.experience') }}</a>
             <a href="{{ route('home') }}#projects" @click="mobileOpen = false" class="mobile-nav-link">{{ __('portfolio.nav.projects') }}</a>
+            <a href="{{ route('home') }}#cases" @click="mobileOpen = false" class="mobile-nav-link">{{ __('portfolio.nav.cases') }}</a>
             <a href="{{ route('home') }}#contact" @click="mobileOpen = false" class="mobile-nav-link">{{ __('portfolio.nav.contact') }}</a>
             <a href="{{ route('resume.download') }}" @click="mobileOpen = false" class="btn-primary text-sm py-2.5 px-5 mt-3 w-full">
                 {{ __('portfolio.nav.download_cv') }}

@@ -424,6 +424,168 @@ body {
     border-color: rgba(124, 92, 191, 0.15);
 }
 
+/* Cases media — show full frame, don't crop */
+.case-media-frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem;
+}
+
+.case-card--empty {
+    border-style: dashed;
+    border-color: rgba(0, 212, 170, 0.25);
+}
+
+.case-card--empty:hover {
+    border-color: rgba(0, 212, 170, 0.45);
+}
+
+.case-empty-slot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    padding: 1.25rem;
+    border: 1px dashed rgba(0, 212, 170, 0.35);
+    border-radius: 0.75rem;
+    background:
+        radial-gradient(circle at 50% 40%, rgba(0, 212, 170, 0.08), transparent 55%),
+        rgba(10, 10, 15, 0.6);
+    text-align: center;
+}
+
+.case-empty-slot__label {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--teal);
+}
+
+.case-empty-slot__hint {
+    max-width: 18rem;
+    font-size: 0.95rem;
+    line-height: 1.45;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.case-empty-slot--modal {
+    min-height: 220px;
+}
+
+.case-media {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 0.75rem;
+}
+
+.case-media--modal {
+    max-height: 360px;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border-radius: 0.75rem;
+}
+
+/* Cases: device preview toggle + phone mockup */
+.case-device-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 999px;
+    color: rgba(255, 255, 255, 0.45);
+    border: 1px solid transparent;
+    transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.case-device-btn:hover {
+    color: var(--teal);
+    background: rgba(0, 212, 170, 0.08);
+}
+
+.case-device-btn.is-active {
+    color: var(--teal);
+    background: rgba(0, 212, 170, 0.12);
+    border-color: rgba(0, 212, 170, 0.25);
+}
+
+.case-preview-desktop {
+    display: block;
+    width: 100%;
+    height: min(360px, 50vh);
+    border: 0;
+    background: #0a0a0f;
+}
+
+.phone-frame {
+    position: relative;
+    width: min(280px, 72vw);
+    aspect-ratio: 9 / 19;
+    padding: 10px;
+    border-radius: 28px;
+    background: linear-gradient(160deg, #2a2a35 0%, #121218 45%, #0a0a0f 100%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow:
+        0 0 0 1px rgba(0, 0, 0, 0.5) inset,
+        0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+.phone-frame__notch {
+    position: absolute;
+    top: 14px;
+    left: 50%;
+    z-index: 2;
+    width: 38%;
+    height: 14px;
+    transform: translateX(-50%);
+    border-radius: 999px;
+    background: #0a0a0f;
+}
+
+.phone-frame__screen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #0a0a0f;
+}
+
+.phone-frame__iframe,
+.phone-frame__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: #0a0a0f;
+}
+
+.phone-frame__image {
+    object-fit: contain;
+    object-position: center;
+}
+
+.phone-frame__home {
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    z-index: 2;
+    width: 28%;
+    height: 4px;
+    transform: translateX(-50%);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
 /* Счетчики */
 .counter {
     font-size: 3rem;
