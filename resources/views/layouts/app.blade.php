@@ -111,8 +111,8 @@
                 <span class="text-xs font-mono text-teal">{{ __('portfolio.footer.role') }}</span>
             </div>
             <div class="flex items-center gap-6">
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-white/30 hover:text-white transition-colors text-sm font-mono">{{ __('portfolio.footer.github') }}</a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-white/30 hover:text-white transition-colors text-sm font-mono">{{ __('portfolio.footer.linkedin') }}</a>
+                <a href="https://github.com/e-belousovva" target="_blank" rel="noopener noreferrer" class="text-white/30 hover:text-white transition-colors text-sm font-mono">{{ __('portfolio.footer.github') }}</a>
+                <a href="https://www.linkedin.com/in/alena-akotchyk-24132419b/" target="_blank" rel="noopener noreferrer" class="text-white/30 hover:text-white transition-colors text-sm font-mono">{{ __('portfolio.footer.linkedin') }}</a>
                 <a href="mailto:lena_helen_b@mail.ru" class="text-white/30 hover:text-white transition-colors text-sm font-mono">{{ __('portfolio.footer.email') }}</a>
             </div>
         </div>
