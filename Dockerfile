@@ -9,10 +9,15 @@ COPY public ./public
 RUN npm run build
 
 # PHP app
-FROM php:8.3-cli-bookworm
+FROM php:8.4-cli-bookworm
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-        git unzip libzip-dev libpng-dev libjpeg62-turbo-dev libfreetype6-dev \
+        git unzip \
+        libsqlite3-dev \
+        libzip-dev \
+        libpng-dev \
+        libjpeg62-turbo-dev \
+        libfreetype6-dev \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) pdo_sqlite zip gd \
     && rm -rf /var/lib/apt/lists/*
@@ -51,4 +56,4 @@ ENV APP_ENV=production \
 
 EXPOSE 10000
 
-CMD ["docker/start.sh"]
+CMD ["bash", "docker/start.sh"]
